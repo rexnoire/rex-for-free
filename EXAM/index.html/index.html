@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive HTML Course | SkillMint</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css/index.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading Interactive Course...</p>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMINT
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> HTML Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> Headings & Text
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> Links & Images
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> Lists & Tables
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> Forms & Inputs
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-html5 html-icon"></i> Semantic HTML
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 1: HTML Basics</span>
+        </a>
+        <a href="#module2" class="sidebar-item">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 2: Headings & Text</span>
+        </a>
+        <a href="#module3" class="sidebar-item">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 3: Links & Images</span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 4: Lists & Tables</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 5: Forms & Inputs</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-html5 html-icon"></i>
+            <span>Module 6: Semantic HTML</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>HTML BASICS</h1>
+                    <h3>Learn the fundamental structure of HTML documents</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>HTML Document Structure</span></h1>
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It consists of elements wrapped in tags that define the structure of your content. Every HTML document has a basic structure that the browser uses to render the page correctly.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+    &lt;p&gt;Edit this code and click "Run" to see your changes!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>&lt;!DOCTYPE html&gt;</code> declares the document type and HTML version</li>
+                                <li><code>&lt;html&gt;</code> is the root element that wraps all content</li>
+                                <li><code>&lt;head&gt;</code> contains meta information, title, and links to resources</li>
+                                <li><code>&lt;body&gt;</code> contains all the visible content of your webpage</li>
+                                <li>Tags usually come in pairs: opening <code>&lt;tag&gt;</code> and closing <code>&lt;/tag&gt;</code></li>
+                                <li>The <code>lang</code> attribute helps with accessibility and SEO</li>
+                                <li><code>meta charset="UTF-8"</code> ensures proper character encoding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>HEADINGS & TEXT</h1>
+                    <h3>Learn to structure text content with HTML</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Headings and Paragraphs</span></h1>
+                    <p>HTML provides six levels of headings from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> to structure your content hierarchically. Paragraphs are created with the <code>&lt;p&gt;</code> tag, and you can format text with tags like <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, and others for emphasis and styling.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;h1&gt;Main Heading (Most Important)&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+&lt;h4&gt;Even Smaller Heading&lt;/h4&gt;
+
+&lt;p&gt;This is a paragraph of text. HTML ignores extra whitespace, so you need to use tags for formatting.&lt;/p&gt;
+
+&lt;p&gt;
+    This paragraph contains &lt;strong&gt;bold text&lt;/strong&gt;, &lt;em&gt;italic text&lt;/em&gt;,
+    &lt;u&gt;underlined text&lt;/u&gt;, and &lt;code&gt;code formatting&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+    You can also create line breaks with &lt;br&gt; tags &lt;br&gt;
+    like this!
+&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;The &lt;hr&gt; tag creates a horizontal rule (divider)&lt;/p&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>&lt;h1&gt;</code> should be used for main titles (only one per page for SEO)</li>
+                                <li>Headings should be used in order (<code>h1</code> > <code>h2</code> > <code>h3</code>, etc.) for proper document structure</li>
+                                <li><code>&lt;p&gt;</code> tags automatically add spacing before and after paragraphs</li>
+                                <li>Use <code>&lt;strong&gt;</code> for important text and <code>&lt;em&gt;</code> for emphasis (preferred over <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code>)</li>
+                                <li><code>&lt;u&gt;</code> underlines text, while <code>&lt;code&gt;</code> displays code snippets</li>
+                                <li><code>&lt;br&gt;</code> creates line breaks (avoid overusing)</li>
+                                <li><code>&lt;hr&gt;</code> creates thematic breaks between sections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>LINKS & IMAGES</h1>
+                    <h3>Learn to add hyperlinks and images to your pages</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Links and Images</span></h1>
+                    <p>The <code>&lt;a&gt;</code> tag creates hyperlinks to other pages or resources, while the <code>&lt;img&gt;</code> tag embeds images in your document. These elements are essential for creating rich, interconnected web experiences and visual content.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;h1&gt;Creating Links&lt;/h1&gt;
+
+&lt;p&gt;
+    Visit &lt;a href="https://www.skillmint.com" target="_blank" rel="noopener"&gt;
+        SkillMint Official Website
+    &lt;/a&gt; to learn more!
+&lt;/p&gt;
+
+&lt;p&gt;
+    You can also link to &lt;a href="#module1"&gt;Module 1&lt;/a&gt; within this page.
+&lt;/p&gt;
+
+&lt;h2&gt;Adding Images&lt;/h2&gt;
+
+&lt;img src="https://via.placeholder.com/400x200" 
+     alt="Example placeholder image"
+     width="400"
+     height="200"&gt;
+
+&lt;p&gt;Images should always have alt text for accessibility.&lt;/p&gt;
+
+&lt;h2&gt;Combining Links and Images&lt;/h2&gt;
+
+&lt;a href="https://www.skillmint.com" target="_blank" rel="noopener"&gt;
+    &lt;img src="https://via.placeholder.com/200x100/04fc42/000000?text=SkillMint+Logo" 
+         alt="SkillMint Logo"
+         width="200"
+         height="100"&gt;
+&lt;/a&gt;
+
+&lt;p&gt;Click the image above to visit SkillMint!&lt;/p&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>The <code>href</code> attribute specifies the link destination (URL or fragment)</li>
+                                <li><code>target="_blank"</code> opens links in a new tab (use with <code>rel="noopener"</code> for security)</li>
+                                <li>Images use the <code>src</code> attribute for the image source (URL or path)</li>
+                                <li>The <code>alt</code> attribute provides alternative text for accessibility (required)</li>
+                                <li>Always include <code>width</code> and <code>height</code> attributes for proper layout</li>
+                                <li>You can nest images inside links to create clickable images</li>
+                                <li>Use descriptive link text (avoid "click here")</li>
+                                <li>For local links, use relative paths (e.g., <code>about.html</code> or <code>images/photo.jpg</code>)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>LISTS & TABLES</h1>
+                    <h3>Learn to organize content with lists and tables</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Lists and Tables</span></h1>
+                    <p>HTML supports ordered (<code>&lt;ol&gt;</code>), unordered (<code>&lt;ul&gt;</code>), and description (<code>&lt;dl&gt;</code>) lists for organizing content. Tables (<code>&lt;table&gt;</code>) are used for displaying tabular data with rows (<code>&lt;tr&gt;</code>), headers (<code>&lt;th&gt;</code>), and cells (<code>&lt;td&gt;</code>).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;h1&gt;HTML Lists&lt;/h1&gt;
+
+&lt;h2&gt;Unordered List (Bullet Points)&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Ordered List (Numbered)&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Learn HTML&lt;/li&gt;
+    &lt;li&gt;Learn CSS&lt;/li&gt;
+    &lt;li&gt;Learn JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Description List&lt;/h2&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h1&gt;HTML Tables&lt;/h1&gt;
+
+&lt;table border="1"&gt;
+    &lt;caption&gt;Programming Languages&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Language&lt;/th&gt;
+            &lt;th&gt;Difficulty&lt;/th&gt;
+            &lt;th&gt;Primary Use&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;HTML&lt;/td&gt;
+            &lt;td&gt;Easy&lt;/td&gt;
+            &lt;td&gt;Structure&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;CSS&lt;/td&gt;
+            &lt;td&gt;Medium&lt;/td&gt;
+            &lt;td&gt;Presentation&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;JavaScript&lt;/td&gt;
+            &lt;td&gt;Hard&lt;/td&gt;
+            &lt;td&gt;Behavior&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;All are essential for web development&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note: Use CSS for styling tables instead of the border attribute.&lt;/p&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Use <code>&lt;ul&gt;</code> for bullet-point lists and <code>&lt;ol&gt;</code> for numbered lists</li>
+                                <li>Each list item is wrapped in <code>&lt;li&gt;</code> tags</li>
+                                <li><code>&lt;dl&gt;</code> creates description lists with terms (<code>&lt;dt&gt;</code>) and definitions (<code>&lt;dd&gt;</code>)</li>
+                                <li>Tables use <code>&lt;tr&gt;</code> for rows, <code>&lt;th&gt;</code> for headers, and <code>&lt;td&gt;</code> for data cells</li>
+                                <li>Structure tables with <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> for better semantics</li>
+                                <li><code>colspan</code> and <code>rowspan</code> merge cells horizontally/vertically</li>
+                                <li><code>&lt;caption&gt;</code> provides a title for the table</li>
+                                <li>Avoid using tables for layout - use CSS Grid or Flexbox instead</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>FORMS & INPUTS</h1>
+                    <h3>Learn to create interactive forms</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Forms and Input Elements</span></h1>
+                    <p>HTML forms (<code>&lt;form&gt;</code>) allow users to enter data that can be sent to a server. They contain various input elements like text fields, checkboxes, radio buttons, dropdowns, and more, making web pages interactive.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;h1&gt;Registration Form&lt;/h1&gt;
+
+&lt;form action="/submit" method="post" novalidate&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        
+        &lt;div&gt;
+            &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required 
+                   placeholder="Enter your full name" minlength="3"&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required
+                   placeholder="your.email@example.com"&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label for="password"&gt;Password:&lt;/label&gt;
+            &lt;input type="password" id="password" name="password" required
+                   placeholder="Create a password" minlength="8"&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;fieldset&gt;
+        &lt;legend&gt;Additional Information&lt;/legend&gt;
+        
+        &lt;div&gt;
+            &lt;label&gt;Gender:&lt;/label&gt;
+            &lt;div&gt;
+                &lt;input type="radio" id="male" name="gender" value="male"&gt;
+                &lt;label for="male"&gt;Male&lt;/label&gt;
+                
+                &lt;input type="radio" id="female" name="gender" value="female"&gt;
+                &lt;label for="female"&gt;Female&lt;/label&gt;
+                
+                &lt;input type="radio" id="other" name="gender" value="other"&gt;
+                &lt;label for="other"&gt;Other&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label for="country"&gt;Country:&lt;/label&gt;
+            &lt;select id="country" name="country" required&gt;
+                &lt;option value="" disabled selected&gt;Select your country&lt;/option&gt;
+                &lt;option value="us"&gt;United States&lt;/option&gt;
+                &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+                &lt;option value="ca"&gt;Canada&lt;/option&gt;
+                &lt;option value="au"&gt;Australia&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label for="bio"&gt;Bio:&lt;/label&gt;
+            &lt;textarea id="bio" name="bio" rows="4" 
+                      placeholder="Tell us about yourself..."&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label&gt;
+                &lt;input type="checkbox" name="subscribe" checked&gt;
+                Subscribe to newsletter
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+&lt;/form&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>The <code>&lt;form&gt;</code> element wraps all form controls</li>
+                                <li><code>action</code> specifies where to send form data</li>
+                                <li><code>method</code> defines how to send data (GET or POST)</li>
+                                <li>Always use <code>&lt;label&gt;</code> elements for accessibility</li>
+                                <li>Different <code>type</code> attributes create different inputs (text, email, password, etc.)</li>
+                                <li><code>required</code> makes a field mandatory</li>
+                                <li><code>placeholder</code> shows example text</li>
+                                <li>Radio buttons share the same <code>name</code> for single selection</li>
+                                <li>Group related fields with <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></li>
+                                <li>Use <code>novalidate</code> to disable browser validation when needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>SEMANTIC HTML</h1>
+                    <h3>Learn modern HTML5 semantic elements</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="module-icon" alt="HTML Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Semantic HTML5 Elements</span></h1>
+                    <p>Semantic HTML elements clearly describe their meaning to both the browser and developer. They improve accessibility, SEO, and make code easier to understand. Modern HTML5 introduced many semantic elements to replace generic <code>&lt;div&gt;</code> elements.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Website Header&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+                &lt;p&gt;Published on &lt;time datetime="2023-05-15"&gt;May 15, 2023&lt;/time&gt; by Author&lt;/p&gt;
+            &lt;/header&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Introduction&lt;/h3&gt;
+                &lt;p&gt;This is the introduction to my blog post about semantic HTML...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Main Content&lt;/h3&gt;
+                &lt;p&gt;Semantic HTML helps search engines understand your content better...&lt;/p&gt;
+                
+                &lt;figure&gt;
+                    &lt;img src="https://via.placeholder.com/600x300" alt="Semantic HTML diagram"&gt;
+                    &lt;figcaption&gt;Diagram showing semantic HTML structure&lt;/figcaption&gt;
+                &lt;/figure&gt;
+                
+                &lt;aside&gt;
+                    &lt;p&gt;Did you know? Screen readers rely on semantic HTML for navigation.&lt;/p&gt;
+                &lt;/aside&gt;
+            &lt;/section&gt;
+            
+            &lt;footer&gt;
+                &lt;p&gt;Tags: HTML, Semantic, Web Development&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Related Posts&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;HTML5 Features&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Accessibility Tips&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2023 My Website. All rights reserved.&lt;/p&gt;
+        &lt;address&gt;
+            Contact: &lt;a href="mailto:contact@example.com"&gt;contact@example.com&lt;/a&gt;
+        &lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>&lt;header&gt;</code> represents introductory content or navigation</li>
+                                <li><code>&lt;nav&gt;</code> contains major navigation blocks</li>
+                                <li><code>&lt;main&gt;</code> holds the primary content (only one per page)</li>
+                                <li><code>&lt;article&gt;</code> encloses self-contained, reusable content</li>
+                                <li><code>&lt;section&gt;</code> groups thematically related content</li>
+                                <li><code>&lt;aside&gt;</code> contains tangentially related content</li>
+                                <li><code>&lt;footer&gt;</code> represents footer content for its nearest ancestor</li>
+                                <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> for images/media with captions</li>
+                                <li><code>&lt;time&gt;</code> for machine-readable dates/times</li>
+                                <li><code>&lt;address&gt;</code> for contact information</li>
+                                <li>Semantic elements improve accessibility, SEO, and code maintainability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own HTML</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different HTML elements and see the results in real-time! This is your sandbox to practice and explore.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;!-- Your HTML code here --&gt;
+&lt;div style="text-align: center; padding: 2rem;"&gt;
+    &lt;h1 style="color: var(--primary);"&gt;Welcome to Your Playground!&lt;/h1&gt;
+    &lt;p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem;"&gt;
+        Edit this code and click "Run Code" to see your changes.
+        Try creating something amazing with what you've learned!
+    &lt;/p&gt;
+
+    &lt;div style="background: var(--primary-light); 
+                padding: 1.5rem; 
+                border-radius: var(--border-radius-md);
+                margin: 0 auto;
+                max-width: 600px;"&gt;
+        &lt;h2&gt;Ideas to Try:&lt;/h2&gt;
+        &lt;ul style="text-align: left; margin-left: 2rem;"&gt;
+            &lt;li&gt;Create a personal profile page&lt;/li&gt;
+            &lt;li&gt;Build a responsive navigation menu&lt;/li&gt;
+            &lt;li&gt;Design a product card with image and details&lt;/li&gt;
+            &lt;li&gt;Make a contact form with validation&lt;/li&gt;
+            &lt;li&gt;Experiment with semantic layout&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;p style="margin-top: 2rem;"&gt;
+        Remember to use the &lt;strong&gt;SkillMint&lt;/strong&gt; color scheme:
+    &lt;/p&gt;
+    &lt;div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;"&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary); 
+                    border-radius: 50%;" title="Primary"&gt;&lt;/div&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary-dark); 
+                    border-radius: 50%;" title="Primary Dark"&gt;&lt;/div&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary-light); 
+                    border-radius: 50%;" title="Primary Light"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a responsive personal portfolio page with:
+                                <ul>
+                                    <li>Header with navigation</li>
+                                    <li>About section</li>
+                                    <li>Projects showcase</li>
+                                    <li>Contact form</li>
+                                </ul>
+                            </li>
+                            <li>Build a blog post layout using semantic HTML5 elements</li>
+                            <li>Design a product card with:
+                                <ul>
+                                    <li>Product image</li>
+                                    <li>Title and description</li>
+                                    <li>Price and "Add to Cart" button</li>
+                                </ul>
+                            </li>
+                            <li>Create a responsive navigation menu that works on mobile</li>
+                            <li>Combine all concepts into a complete webpage layout</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use the browser's developer tools (F12) to inspect elements</li>
+                            <li>Try adding inline styles with the <code>style</code> attribute</li>
+                            <li>Experiment with the SkillMint color variables:
+                                <ul>
+                                    <li><code>var(--primary)</code> - Main green color (#04fc42)</li>
+                                    <li><code>var(--primary-dark)</code> - Darker green (#03c734)</li>
+                                    <li><code>var(--primary-light)</code> - Light green background (#e0ffe8)</li>
+                                    <li><code>var(--primary-extra-light)</code> - Very light green (#f5fff7)</li>
+                                </ul>
+                            </li>
+                            <li>For more practice, try recreating popular website components</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Subscription CTA -->
+            <div class="subscription-cta" data-aos="fade-up">
+                <h2>Ready to Master Web Development?</h2>
+                <p>Unlock our complete course library with a SkillMint Pro subscription, including advanced HTML, CSS, JavaScript, and more!</p>
+                <button class="cta-btn">
+                    <i class="fas fa-rocket"></i> Get SkillMint Pro - $15/month
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 120
+        });
+        
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('fade-out');
+            }, 1000);
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Function to run code in preview
+        function runCode(editorId, outputId) {
+            const editor = document.getElementById(editorId);
+            const output = document.getElementById(outputId);
+            
+            try {
+                output.innerHTML = editor.value;
+            } catch (error) {
+                output.innerHTML = `<div style="color: red; padding: 1rem;">Error: ${error.message}</div>`;
+            }
+        }
+        
+        // Initialize all editors with their default output
+        document.addEventListener('DOMContentLoaded', function() {
+            // Run all code editors on load
+            runCode('editor-1', 'output-1');
+            runCode('editor-2', 'output-2');
+            runCode('editor-3', 'output-3');
+            runCode('editor-4', 'output-4');
+            runCode('editor-5', 'output-5');
+            runCode('editor-6', 'output-6');
+            runCode('playground-editor', 'playground-output');
+            
+            // Add event listeners to all run buttons in editor headers
+            document.querySelectorAll('.run-editor').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const editorContainer = this.closest('.code-editor-container');
+                    const editor = editorContainer.querySelector('.code-editor');
+                    const output = editorContainer.querySelector('.preview-container');
+                    runCode(editor.id, output.id);
+                });
+            });
+            
+            // Add reset functionality
+            document.querySelectorAll('.reset-editor').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const editorContainer = this.closest('.code-editor-container');
+                    const editor = editorContainer.querySelector('.code-editor');
+                    const originalContent = editor.dataset.original || editor.defaultValue;
+                    editor.value = originalContent;
+                    runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+                });
+            });
+            
+            // Store original content for reset functionality
+            document.querySelectorAll('.code-editor').forEach(editor => {
+                editor.dataset.original = editor.value;
+            });
+        });
+        
+        // Responsive sidebar toggle
+        function checkScreenSize() {
+            if (window.innerWidth <= 1024) {
+                sidebar.style.transform = 'translateX(-100%)';
+                document.querySelector('.content-wrapper').style.marginLeft = '0';
+            } else {
+                sidebar.style.transform = 'translateX(0)';
+                document.querySelector('.content-wrapper').style.marginLeft = '250px';
+            }
+        }
+        
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+        
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all items
+                document.querySelectorAll('.sidebar-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 1024) {
+                    navMenu.classList.remove('active');
+                    sidebar.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
